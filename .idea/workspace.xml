@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1eaf6a6a-18f7-4d6c-8c2f-049c35432cbd" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/groovy/domain/NoticeAlert.groovy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/groovy/domain/PopNotice.groovy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/groovy/domain/NoticeAlertSpec.groovy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/groovy/domain/PopNoticeSpec.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/groovy/nopops/NoFreezepopApplication.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/domain/NoticeAlert.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/nopops/domain/NoticeAlert.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/domain/PopNotice.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/nopops/domain/PopNotice.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/groovy/domain/NoticeAlertSpec.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/groovy/nopops/domain/NoticeAlertSpec.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/groovy/domain/PopNoticeSpec.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/groovy/nopops/domain/PopNoticeSpec.groovy" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -62,20 +61,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.gradle">
+      <file leaf-file-name="NoFreezepopApplication.groovy" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/groovy/nopops/NoFreezepopApplication.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="485">
-              <caret line="37" column="31" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+            <state relative-caret-position="187">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+              <folding>
+                <element signature="e#1#50#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -476,6 +469,8 @@
         <option value="$PROJECT_DIR$/src/test/groovy/domain/NoticeAlertSpec.groovy" />
         <option value="$PROJECT_DIR$/src/test/groovy/domain/PopNoticeSpec.groovy" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/groovy/NoFreezepopApplication.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/nopops/NoFreezepopApplication.groovy" />
       </list>
     </option>
   </component>
@@ -521,7 +516,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="groovy" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
+              <item name="nopops" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="nofreezepops" type="b2602c69:ProjectViewProjectNode" />
@@ -564,6 +559,9 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
   </component>
   <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="nopops" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Miaka\Desktop\nofreezepops\src\main\resources" />
     </key>
@@ -652,7 +650,7 @@
       <window_info anchor="bottom" id="Terminal" order="3" />
       <window_info id="Capture Tool" />
       <window_info id="Designer" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19150642" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23637821" />
       <window_info anchor="right" id="Build" order="8" weight="0.33253205" />
       <window_info anchor="right" id="Gradle" order="3" visible="true" weight="0.18509616" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -676,28 +674,28 @@
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/groovy/groovy_console.groovy">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/domain/NoticeAlert.groovy">
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/nopops/domain/NoticeAlert.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" selection-start-line="4" selection-end-line="8" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/groovy/domain/PopNoticeSpec.groovy">
+    <entry file="file://$PROJECT_DIR$/src/test/groovy/nopops/domain/PopNoticeSpec.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/domain/PopNotice.groovy">
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/nopops/domain/PopNotice.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/groovy/domain/NoticeAlertSpec.groovy">
+    <entry file="file://$PROJECT_DIR$/src/test/groovy/nopops/domain/NoticeAlertSpec.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" selection-start-line="4" selection-end-line="7" selection-end-column="3" />
@@ -713,8 +711,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+        <state relative-caret-position="306">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/nopops/NoFreezepopApplication.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#1#50#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

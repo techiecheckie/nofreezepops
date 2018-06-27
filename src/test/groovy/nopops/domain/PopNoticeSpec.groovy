@@ -1,4 +1,4 @@
-package domain
+package nopops.domain
 
 import spock.lang.Specification
 
@@ -7,5 +7,5 @@ import spock.lang.Specification
  *
  */
 
-class NoticeAlertSpec extends Specification{
+class PopNoticeSpec extends Specification {
 }
