@@ -7,5 +7,5 @@ import spock.lang.Specification
  *
  */
 
-class NoticeAlertSpec extends Specification{
+class PopReportSpec extends Specification {
 }
