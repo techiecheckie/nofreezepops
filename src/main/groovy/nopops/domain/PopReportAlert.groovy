@@ -1,15 +1,17 @@
 package nopops.domain
 
-import org.springframework.stereotype.Component
-
 /**
  * Created by Riley, 6/26/2018.
  *
- * A class that defines what an alert on a notice looks like.
+ * An alert that will get sent out by the app to notify ppl
+ * about activity.
  */
 
-@Component
 class PopReportAlert {
 
+    List<PopReport> popReportList
+
+    // TODO: Add a list of receivers to get the alerts
+    //List<AlertReceiver> alertReceiverList
 
 }

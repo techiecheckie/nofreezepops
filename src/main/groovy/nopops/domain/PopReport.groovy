@@ -41,6 +41,9 @@ class PopReport {
 
     String longitude
 
+    // Will just use one tag for now, will have lists later
+    PopReportTag [] tags
+
     // For Spring JPA to use.
     protected PopReport(){
 
@@ -49,7 +52,7 @@ class PopReport {
     // For testing purposes.
     PopReport(long id, Date date, String city, String state, String time, String str1n,
                      String str1e, String str2n, String str2e, String zip, Reporter rep,
-                     String lat, String longit){
+                     String lat, String longit, PopReportTag [] tags){
 
         this.id = id
         this.dateOfReport = date
@@ -64,6 +67,7 @@ class PopReport {
         this.reporter = rep
         this.latitude = lat
         this.longitude = longit
+        this.tags = tags
     }
 
 }
