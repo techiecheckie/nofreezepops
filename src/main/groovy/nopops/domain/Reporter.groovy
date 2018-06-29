@@ -1,7 +1,7 @@
 package nopops.domain
 
 import nopops.common.PopsConstants
-import org.springframework.data.annotation.Id
+import javax.persistence.Id
 
 import javax.persistence.Entity
 import javax.persistence.JoinColumn

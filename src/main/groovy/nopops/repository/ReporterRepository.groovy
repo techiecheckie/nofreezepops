@@ -5,8 +5,7 @@ import org.springframework.data.repository.CrudRepository
 import org.springframework.stereotype.Repository
 
 @Repository
-interface ReporterRepository extends CrudRepository<Reporter, Long> {
+interface ReporterRepository extends CrudRepository<Reporter, String> {
 
-    Reporter findById(String id)
     List<Reporter> findByTag(String tag)
 }

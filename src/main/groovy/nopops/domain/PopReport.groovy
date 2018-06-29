@@ -2,8 +2,8 @@ package nopops.domain
 
 import nopops.common.PopsConstants
 import nopops.util.FormatUtil
-import org.springframework.data.annotation.Id
 
+import javax.persistence.Id
 import javax.persistence.Entity
 import javax.persistence.GeneratedValue
 
@@ -18,9 +18,9 @@ class PopReport {
 
     @Id
     @GeneratedValue
-    long id
+    Long id
 
-    Date dateOfReport
+    Date date
 
     String city
 
