@@ -1,19 +1,32 @@
 package nopops.repository
 
 import nopops.domain.PopReport
-import nopops.domain.PopReportAlert
-import org.springframework.data.repository.CrudRepository
 
+import org.springframework.data.jpa.repository.JpaRepository
 
-interface PopReportRepository extends CrudRepository<PopReport, Long>{
+/**
+ * Created by Riley, 6/29/2018.
+ *
+ * Sets up needed methods for the repo.
+ */
 
-    List<PopReport> findAllInArea(String city, String state)
-    List<PopReport> findAllInArea(String zip)
+interface PopReportRepository extends JpaRepository<PopReport, Long>{
 
     // TODO: How to implement finding by distance?
 
-    // Will be used for abuse management and to find stale reports.
-    List<PopReportAlert> findByReporter(long reporterId)
-    List<PopReportAlert> findByDate(Date date)
 
+    // Already implemented through Spring JPA
+    List<PopReport> findByZipCode(String zip)
+    List<PopReport> findByCityAndState(String city, String state)
+
+    // Just in case
+    // Already implemented through Spring JPA
+    List<PopReport> findByZipCodeOrderByDateDesc(String zip)
+    List<PopReport> findByCityAndStateOrderByDateDesc(String city, String state)
+
+    // Will be used for abuse management and to find stale reports.
+    List<PopReport> findByReporterId(String reporterId)
+    List<PopReport> findByDateOrderByDateDesc(Date date)
+
+    //Saving functions already included here.
 }

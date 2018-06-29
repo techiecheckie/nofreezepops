@@ -1,7 +1,12 @@
 package nopops.domain
 
+import nopops.common.PopsConstants
+import nopops.util.FormatUtil
 import org.springframework.data.annotation.Id
-import org.springframework.stereotype.Component
+
+import javax.persistence.Entity
+import javax.persistence.GeneratedValue
+import javax.persistence.ManyToOne
 
 /**
  * Created by Riley, 6/26/2018.
@@ -9,10 +14,11 @@ import org.springframework.stereotype.Component
  * A class that defines what a notice looks like from the API.
  */
 
-@Component
+@Entity
 class PopReport {
 
     @Id
+    @GeneratedValue
     long id
 
     Date dateOfReport
@@ -35,39 +41,63 @@ class PopReport {
 
     String zipCode
 
-    Reporter reporter
+    // Assigned at creation.
+    String reporterId
 
     String latitude
 
     String longitude
 
     // Will just use one tag for now, will have lists later
-    PopReportTag [] tags
+    String tag = PopsConstants.UNVERIFIED
+
+    int amtReported = 0
 
     // For Spring JPA to use.
     protected PopReport(){
-
     }
 
     // For testing purposes.
     PopReport(long id, Date date, String city, String state, String time, String str1n,
-                     String str1e, String str2n, String str2e, String zip, Reporter rep,
-                     String lat, String longit, PopReportTag [] tags){
+                     String str1e, String str2n, String str2e, String zip,
+              String repId, String lat, String longit){
 
         this.id = id
         this.dateOfReport = date
         this.city = city
         this.state = state
         this.time = time
-        this.street1Name = str1n
+        this.street1Name = FormatUtil.stripSpecialCharacters(str1n)
         this.street1Ending = str1e
-        this.street2Name = str2n
+        this.street2Name = FormatUtil.stripSpecialCharacters(str2n)
         this.street2Ending = str2e
         this.zipCode = zip
-        this.reporter = rep
+        this.reporterId = repId
         this.latitude = lat
         this.longitude = longit
-        this.tags = tags
+        tag = PopsConstants.UNVERIFIED
+        amtReported = 1
+    }
+
+    void verifyReport() {
+        if (tag != PopsConstants.VOLUNTEERVERIFIED) {
+            tag = PopsConstants.VOLUNTEERVERIFIED
+        }
+    }
+
+    void markSuspicious() {
+        if (tag != PopsConstants.SUSPICIOUS) {
+            tag = PopsConstants.SUSPICIOUS
+        }
+    }
+
+    void addReporter() {
+        amtReported++
+    }
+
+    // Just in case scenario
+    void removeReporter(){
+        amtReported--
     }
 
 }

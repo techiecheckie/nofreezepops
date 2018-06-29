@@ -17,4 +17,10 @@ class PopsConstants {
     static final String SUSPICIOUS = 'Suspicious'
     static final String VOLUNTEERVERIFIED = 'Volunteer Verified'
 
+    // Reporter tag types
+    static final String VERIFIED = 'Verified'
+    static final String UNVERIFIED = 'Unverified'
+    static final String NOTINUS = 'Not In US'
+        // Suspicious is also okay for this.
+
 }

@@ -1,7 +1,11 @@
 package nopops.domain
 
+import nopops.common.PopsConstants
 import org.springframework.data.annotation.Id
 import org.springframework.stereotype.Component
+
+import javax.persistence.JoinColumn
+import javax.persistence.OneToMany
 
 /**
  * Created by Riley, 6/27/2018.
@@ -13,7 +17,7 @@ import org.springframework.stereotype.Component
 class Reporter {
 
     @Id
-    String phoneNum
+    String reporterId //電話番号とか景帝番号とか
 
     String city
 
@@ -31,30 +35,40 @@ class Reporter {
 
     String longitude
 
+    // Can = 'verified', 'unverified', 'Not In US' or 'suspicious' for now.
+    String tag
+
+    // TODO: Create bidirectional relationship between PopReports and Reporters?
+    @OneToMany
+    @JoinColumn(name = 'reporterId')
+    List<PopReport> popReports
+
     // For Spring JPA usage
     protected Reporter(){}
 
     // For local reporters
-    Reporter(String phone, String city, String state, String zip) {
-        this.phoneNum = phone
+    Reporter(String repId, String city, String state, String zip) {
+        this.reporterId = repId
         this.city = city
         this.state = state
         this.zipCode = zip
         isUsian = true
+        tag = PopsConstants.UNVERIFIED
     }
 
     // What do we do for foreign reporters?
-    Reporter(String phone, String country) {
-        this.phoneNum = phone
+    Reporter(String repId, String country) {
+        this.reporterId = repId
         this.country = country
         isUsian = false
+        tag = PopsConstants.NOTINUS
     }
 
     void setLatLong(String zip) {
 
     }
 
-    void setLatLong(String city, String zip) {
+    void setLatLong(String city, String state) {
 
     }
 }
