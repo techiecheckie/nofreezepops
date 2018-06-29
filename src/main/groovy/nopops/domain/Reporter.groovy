@@ -2,8 +2,8 @@ package nopops.domain
 
 import nopops.common.PopsConstants
 import org.springframework.data.annotation.Id
-import org.springframework.stereotype.Component
 
+import javax.persistence.Entity
 import javax.persistence.JoinColumn
 import javax.persistence.OneToMany
 
@@ -13,7 +13,7 @@ import javax.persistence.OneToMany
  * Keeps basic info on a reporter for abuse tracking purposes.
  */
 
-@Component
+@Entity
 class Reporter {
 
     @Id

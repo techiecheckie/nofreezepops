@@ -6,7 +6,6 @@ import org.springframework.data.annotation.Id
 
 import javax.persistence.Entity
 import javax.persistence.GeneratedValue
-import javax.persistence.ManyToOne
 
 /**
  * Created by Riley, 6/26/2018.

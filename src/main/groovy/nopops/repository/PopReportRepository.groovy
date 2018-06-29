@@ -3,6 +3,7 @@ package nopops.repository
 import nopops.domain.PopReport
 
 import org.springframework.data.jpa.repository.JpaRepository
+import org.springframework.stereotype.Repository
 
 /**
  * Created by Riley, 6/29/2018.
@@ -10,6 +11,7 @@ import org.springframework.data.jpa.repository.JpaRepository
  * Sets up needed methods for the repo.
  */
 
+@Repository
 interface PopReportRepository extends JpaRepository<PopReport, Long>{
 
     // TODO: How to implement finding by distance?
