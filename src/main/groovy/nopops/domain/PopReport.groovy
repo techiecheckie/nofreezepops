@@ -59,10 +59,10 @@ class PopReport {
     // For testing purposes.
     PopReport(long id, Date date, String city, String state, String time, String str1n,
                      String str1e, String str2n, String str2e, String zip,
-              String repId, String lat, String longit){
+              String repId){
 
         this.id = id
-        this.dateOfReport = date
+        this.date = date
         this.city = city
         this.state = state
         this.time = time
@@ -72,8 +72,6 @@ class PopReport {
         this.street2Ending = str2e
         this.zipCode = zip
         this.reporterId = repId
-        this.latitude = lat
-        this.longitude = longit
         tag = PopsConstants.UNVERIFIED
         amtReported = 1
     }
